@@ -1,13 +1,18 @@
 " Keywords
-syntax keyword mimsaKeyword export def type
+syntax keyword mimsaKeyword module exports
+syntax keyword mimsaKeyword import as
+syntax keyword mimsaKeyword type alias
+syntax keyword mimsaKeyword foreign
+syntax keyword mimsaKeyword fn
 syntax keyword mimsaKeyword if then else
-syntax keyword mimsaKeyword case of
+syntax keyword mimsaKeyword match with end
+syntax keyword mimsaKeyword do return
 syntax keyword mimsaKeyword let in
 
 " Literals
 syntax match mimsaNumber "\v<\d[0-9_]*(\.\d[0-9_]*)?>"
-syntax keyword mimsaBool True False
-syntax keyword mimsaUnit Unit
+syntax keyword mimsaBool true false
+syntax keyword mimsaUnit unit
 syntax region mimsaString start=+"+ end=+"+ skip=+\\"+ contains=@Spell
 "      ^^^
 " (see :help syn-pattern)
