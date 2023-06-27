@@ -1,8 +1,8 @@
 " Keywords
 syntax keyword mimsaKeyword type alias
 syntax keyword mimsaKeyword def
-syntax keyword mimsaKeyword if then else
-syntax keyword mimsaKeyword case of
+syntax keyword mimsaConditional if then else
+syntax keyword mimsaConditional case of
 syntax keyword mimsaKeyword let in
 
 " Literals
