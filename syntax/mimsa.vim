@@ -1,6 +1,7 @@
 " Keywords
-syntax keyword mimsaKeyword type alias
+syntax keyword mimsaKeyword type
 syntax keyword mimsaKeyword def
+syntax keyword mimsaKeyword class instance
 syntax keyword mimsaConditional if then else
 syntax keyword mimsaConditional case of
 syntax keyword mimsaKeyword let in
@@ -8,7 +9,7 @@ syntax keyword mimsaKeyword let in
 " Literals
 syntax match mimsaNumber "\v<\d[0-9_]*(\.\d[0-9_]*)?>"
 syntax keyword mimsaBool True False
-syntax keyword mimsaUnit unit
+syntax keyword mimsaUnit Unit
 syntax region mimsaString start=+"+ end=+"+ skip=+\\"+ contains=@Spell
 "      ^^^
 " (see :help syn-pattern)
