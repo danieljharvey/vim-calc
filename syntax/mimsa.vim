@@ -24,8 +24,7 @@ syntax match mimsaDelimiter "[,|.()[\]{}]"
 
 " Comments
 syntax keyword mimsaTodo NOTE TODO FIXME XXX contained
-syntax match mimsaComment "\v--.*$" contains=mimsaTodo,@Spell
-syntax region mimsaComment start=+/*+ end=+*/+
+syntax region mimsaComment start=+/*+ end=+*/+ contained
 
 " (see NAMING CONVENTIONS in :help syn-files)
 highlight default link mimsaTodo Todo
