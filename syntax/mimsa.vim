@@ -1,7 +1,7 @@
 " Keywords
-syntax keyword mimsaKeyword type
-syntax keyword mimsaKeyword def
-syntax keyword mimsaKeyword class instance
+syntax keyword mimsaModuleItem type
+syntax keyword mimsaModuleItem def
+syntax keyword mimsaModuleItem class instance
 syntax keyword mimsaConditional if then else
 syntax keyword mimsaConditional case of
 syntax keyword mimsaKeyword let in
@@ -25,12 +25,14 @@ syntax match mimsaDelimiter "[,|.()[\]{}]"
 " Comments
 syntax keyword mimsaTodo NOTE TODO FIXME XXX contained
 syntax match mimsaComment "\v--.*$" contains=mimsaTodo,@Spell
+syntax region mimsaComment start=+/*+ end=+*/+
 
 " (see NAMING CONVENTIONS in :help syn-files)
 highlight default link mimsaTodo Todo
 highlight default link mimsaComment Comment
 highlight default link mimsaConditional Conditional
 highlight default link mimsaKeyword Keyword
+highlight default link mimsaModuleItem Statement
 highlight default link mimsaDelimiter Delimiter
 highlight default link mimsaProperName Type
 highlight default link mimsaUnusedName Comment
