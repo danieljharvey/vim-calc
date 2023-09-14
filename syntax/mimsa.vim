@@ -2,6 +2,7 @@
 syntax keyword mimsaModuleItem type
 syntax keyword mimsaModuleItem def
 syntax keyword mimsaModuleItem class instance
+syntax keyword mimsaModuleItem test using
 syntax keyword mimsaConditional if then else
 syntax keyword mimsaConditional case of
 syntax keyword mimsaKeyword let in
@@ -27,11 +28,13 @@ syntax keyword mimsaTodo NOTE TODO FIXME XXX contained
 syntax region mimsaComment start=+/*+ end=+*/+ contained
 
 " (see NAMING CONVENTIONS in :help syn-files)
+highlight default link mimsaName Identifier
+highlight default link mimsaProperName Type
 highlight default link mimsaTodo Todo
 highlight default link mimsaComment Comment
 highlight default link mimsaConditional Conditional
 highlight default link mimsaKeyword Keyword
-highlight default link mimsaModuleItem Statement
+highlight default link mimsaModuleItem Keyword
 highlight default link mimsaDelimiter Delimiter
 highlight default link mimsaProperName Type
 highlight default link mimsaUnusedName Comment
