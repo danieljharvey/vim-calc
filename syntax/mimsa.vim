@@ -25,7 +25,7 @@ syntax match mimsaDelimiter "[,|.()[\]{}]"
 
 " Comments
 syntax keyword mimsaTodo NOTE TODO FIXME XXX contained
-syntax region mimsaComment start="+/*+" end="+*/+" contained
+syntax region mimsaComment start="/\*" end="\*/" contained
 
 " (see NAMING CONVENTIONS in :help syn-files)
 highlight default link mimsaName Identifier
