@@ -13,6 +13,8 @@ syntax keyword calcKeyword memory global mut
 syntax match calcNumber "\v<\d[0-9_]*(\.\d[0-9_]*)?>"
 syntax keyword calcBool True False
 syntax keyword calcUnit Unit
+syntax keyword calcInt Int8 Int16 Int32 Int64
+syntax keyword calcFloat Float32 Float64
 syntax region calcString start=+"+ end=+"+ skip=+\\"+ contains=@Spell
 "      ^^^
 " (see :help syn-pattern)
@@ -32,6 +34,8 @@ syntax region calcComment start="/\*" end="\*/"
 " (see NAMING CONVENTIONS in :help syn-files)
 highlight default link calcName Identifier
 highlight default link calcProperName Type
+highlight default link calcInt Type
+highlight default link calcFloat Type
 highlight default link calcTodo Todo
 highlight default link calcComment Comment
 highlight default link calcConditional Conditional
