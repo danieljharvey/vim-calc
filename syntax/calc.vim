@@ -7,6 +7,7 @@ syntax keyword calcConditional if then else
 syntax keyword calcConditional case of
 syntax keyword calcKeyword let in
 syntax keyword calcKeyword function import
+syntax keyword calcKeyword memory global mut
 
 " Literals
 syntax match calcNumber "\v<\d[0-9_]*(\.\d[0-9_]*)?>"
